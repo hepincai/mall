@@ -5,10 +5,10 @@ import store from "./store";
 
 Vue.config.productionTip = false;
 
-Vue.prototype.$bus = new Vue({
-	render: (h) => h(App),
-	router,
-	store,
-}).$mount("#app");
+Vue.prototype.$bus = new Vue();
 
-// new Vue().$mount("#app");
+new Vue({
+    render: (h) => h(App),
+    router,
+    store,
+}).$mount("#app");
